@@ -1,8 +1,8 @@
 name: Understand Events, Expressions, and Contexts
 on:
-  push:
-    branches:
-      - feature/events-expressions
+  # push:
+  #   branches:
+  #     - feature/events-expressions
   workflow_dispatch:
 
 jobs:
