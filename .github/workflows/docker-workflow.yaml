@@ -4,8 +4,17 @@ on:
     branches:
       - feature/docker-push
 jobs:
+  collect-metadata:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: print runner name
+        run: echo "The runner is $RUNNER_NAME"
+      - name: print the action
+        run: echo "I am triggerd by ${{ github.event_name}}
+        
   build-and-push:
     runs-on: ubuntu-latest
+    needs: collect-metadata
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
