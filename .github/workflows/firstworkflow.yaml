@@ -19,6 +19,11 @@ jobs:
           echo test, and deploy your project.
       - name: Run a single step
         run: echo Add other actions to build, test, and deploy your project.
+      - name: Run a multi-line script
+        run: |
+          sh 'sleep 60'
+      - name: Run a single step
+        run: echo Add other actions to build, test, and deploy your project.
   Third-job:
     runs-on: ubuntu-latest
     steps:
