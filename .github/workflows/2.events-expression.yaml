@@ -2,7 +2,7 @@ name: Understand Events, Expressions, and Contexts
 on:
   push:
     branches:
-      - feature/events-expressions
+      - feature/docker-push
   workflow_dispatch:
 
 jobs:
