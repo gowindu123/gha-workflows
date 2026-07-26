@@ -10,7 +10,7 @@ jobs:
       - name: print runner name
         run: echo "The runner is $RUNNER_NAME"
       - name: print the action
-        run: echo "I am triggerd by ${{ github.event_name}}
+        run: echo "I am triggerd by ${{ github.event_name}}"
         
   build-and-push:
     runs-on: ubuntu-latest
