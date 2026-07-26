@@ -1,0 +1,27 @@
+name: Understand Events, Expressions, and Contexts
+on:
+  # push:
+  #   branches:
+  #     - feature/events-expressions
+  workflow_dispatch:
+
+jobs:
+  print-metadata:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: print runner name
+        run: echo "The runner is $RUNNER_NAME"
+      - name: print the action
+        run: echo "I am triggerd by ${{ github.event_name}}"
+      - name: print the branch
+        run: echo "The branch is ${{ github.ref_name }}"
+      - name: print the workflow
+        run: echo "The workflow is ${{ github.workflow }}"
+      - name: print the actor
+        run: echo "The actor is ${{ github.actor }}"
+      - name: print the repository
+        run: echo "The repository is ${{ github.repository }}"
+      - name: Demonstrate Feature Branch Condition
+        if: ${{ startsWith(github.ref_name, 'feature/') }}
+        run: |
+          echo "Feature branch detected successfully"
