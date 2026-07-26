@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./project-files
+          file: ./project-files/Dockerfile
           push: true
           tags: govindudev/gha-app:latest
 
